@@ -12,8 +12,13 @@ export default async function handler(req, res) {
 }
 
 const getClients = async (req, res) => {
-    const [result] = await db.query('SELECT * FROM client')
-    return res.status(200).json(result)
+    try {
+        const [result] = await db.query('SELECT * FROM client')
+        return res.status(200).json(result)
+    } catch (error) {
+        return res.status(500).json({ message: error });
+    }
+
 }
 
 const saveClient = async (req, res) => {

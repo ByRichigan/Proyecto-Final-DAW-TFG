@@ -19,15 +19,15 @@ export default function ClientView({ client }: any) {
     <Layout>
       <div className="flex justify-center items-center h-screen">
         <div className="bg-gray-300 p-8 rounded shadow">
-          <h1 className="text-2xl font-bold mb-4">Client Details</h1>
+          <h1 className="text-2xl font-bold mb-4">Detalles del Cliente</h1>
           <div className="border p-4">
-            <p><strong>Client ID:</strong> {client.clientid}</p>
-            <p><strong>Name:</strong> {client.name}</p>
-            <p><strong>Surname:</strong> {client.surname}</p>
+            <p><strong>ID del Cliente:</strong> {client.clientid}</p>
+            <p><strong>Nombre:</strong> {client.name}</p>
+            <p><strong>Apellido:</strong> {client.surname}</p>
             <p><strong>Email:</strong> {client.email}</p>
-            <p><strong>Telephone:</strong> {client.tlf}</p>
+            <p><strong>Telefono:</strong> {client.tlf}</p>
             <p><strong>DNI:</strong> {client.dni}</p>
-            <p><strong>City:</strong> {client.city}</p>
+            <p><strong>Ciudad:</strong> {client.city}</p>
           </div>
           <button className="bg-red-400 px-3 py-2 text-white" onClick={() => handleDelete(client.clientid)}>
             Borrar cliente
